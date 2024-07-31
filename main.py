@@ -92,7 +92,7 @@ def end_screen(win,elapsed_time, targets_pressed, clicks):
     hits_label = LABEL_FONT.render(f"Hits: {hits}", 1, "violet")
     accuracy = 0
     if targets_pressed!=0:
-        accuracy = round(clicks*100/targets_pressed,1)
+        accuracy = round(targets_pressed*100/clicks,2)
     accuracy_label = LABEL_FONT.render(f"Accuracy: {accuracy}", 1, "green")
 
     win.blit(time_label, (get_middle(time_label), 100))
